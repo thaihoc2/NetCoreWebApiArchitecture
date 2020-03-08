@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using NetCoreWebApiArchitectureDemo.Core.Interfaces;
 
 namespace NetCoreWebApiArchitectureDemo.Controllers
 {
@@ -10,11 +12,18 @@ namespace NetCoreWebApiArchitectureDemo.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        IPartnerRepository _partnerRepository;
+
+        public ValuesController(IPartnerRepository partnerRepository)
+        {
+            _partnerRepository = partnerRepository;
+        }
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public async Task<ActionResult<IEnumerable<string>>> Get()
         {
-            return new string[] { "value1", "value2" };
+            var data = await _partnerRepository.ListAllAsync();
+            return data.Select(x => x.Name).ToList();
         }
 
         // GET api/values/5
