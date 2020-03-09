@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace NetCoreWebApiArchitectureDemo.Domain.Entities
+namespace NetCoreWebApiArchitectureDemo.Core.Entities
 {
     public class Partner : BaseEntity
     {

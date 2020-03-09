@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using NetCoreWebApiArchitectureDemo.Core.Entities;
 using NetCoreWebApiArchitectureDemo.Domain.Entities;
 using System;
 using System.Collections.Generic;
