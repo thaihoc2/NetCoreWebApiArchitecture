@@ -10,6 +10,7 @@ namespace NetCoreWebApiArchitectureDemo.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ValuesController : ControllerBase
     {
         IPartnerRepository _partnerRepository;
