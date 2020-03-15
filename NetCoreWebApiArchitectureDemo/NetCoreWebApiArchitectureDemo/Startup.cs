@@ -163,7 +163,7 @@ namespace NetCoreWebApiArchitectureDemo
                 app.UseHsts();
             }
 
-            ApplicationDbInitializer.SeedUsers(userManager);
+            //ApplicationDbInitializer.SeedUsers(userManager);
 
             // set up bearer token
             
