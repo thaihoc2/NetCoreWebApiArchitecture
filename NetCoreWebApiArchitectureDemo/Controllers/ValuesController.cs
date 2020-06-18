@@ -10,7 +10,7 @@ namespace NetCoreWebApiArchitectureDemo.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class ValuesController : ControllerBase
     {
         IPartnerRepository _partnerRepository;
@@ -29,7 +29,7 @@ namespace NetCoreWebApiArchitectureDemo.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public ActionResult<string> Get(int id, string test)
         {
             return "value";
         }
